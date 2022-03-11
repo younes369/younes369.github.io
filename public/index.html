@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -39,5 +40,18 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <script>
+      jQuery(document).ready(function () {
+        $('.hero').mousemove(function (e) {
+          var rXP = (e.pageX - this.offsetLeft - $(this).width() / 2);
+          var rYP = (e.pageY - this.offsetTop - $(this).height() / 2);
+          $('#hero-text').css('text-shadow', +rYP / 30 + 'px ' + rXP / 240 + 'px var(--Secondary-color), ' + rYP / 24 + 'px ' + rXP / 180 + 'px rgba(255,237,0,1), ' + rXP / 210 + 'px ' + rYP / 36 + 'px  #0F1264');
+        });
+      });
+
+
+
+    </script>
   </body>
 </html>

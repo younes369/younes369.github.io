@@ -1,0 +1,62 @@
+[
+    {
+       "icon":"./assets/webDevelopment-icon.svg" ,
+       "title":"Web Development",
+       "phrase":"Some Catchy phrase in bold.",
+       "key-points":[
+           "some key points!",
+           "some key points!",
+           "some key points!"
+       ]
+    },
+    {
+       "icon":"./assets/webdesign-icon.svg" ,
+       "title":"Webdesign ",
+       "phrase":"Some Catchy phrase in bold.",
+       "key-points":[
+           "some key points!",
+           "some key points!",
+           "some key points!"
+       ]
+    },
+    {
+       "icon":"./assets/logo-design-icon.svg" ,
+       "title":"Logo Design",
+       "phrase":"Some Catchy phrase in bold.",
+       "key-points":[
+           "some key points!",
+           "some key points!",
+           "some key points!"
+       ]
+    },
+    {
+       "icon":"./assets/mobile-apps-icon.svg" ,
+       "title":"Mobile Apps",
+       "phrase":"Some Catchy phrase in bold.",
+       "key-points":[
+           "some key points!",
+           "some key points!",
+           "some key points!"
+       ]
+    },
+    {
+       "icon":"./assets/it-icon.svg" ,
+       "title":"IT Infrastructure",
+       "phrase":"Some Catchy phrase in bold.",
+       "key-points":[
+           "some key points!",
+           "some key points!",
+           "some key points!"
+       ]
+    },
+    {
+       "icon":"./assets/webDevelopment-icon.svg" ,
+       "title":"Web Development",
+       "phrase":"Some Catchy phrase in bold.",
+       "key-points":[
+           "some key points!",
+           "some key points!",
+           "some key points!"
+       ]
+    }
+]

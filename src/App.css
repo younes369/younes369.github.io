@@ -1,38 +1,311 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Playfair+Display:wght@400;500;800&display=swap");
+:root {
+  --primary-color: #07082e;
+  --Secondary-color: #ffda19;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+  list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+a {
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+  font-family: "Audiowide", cursive;
+  color: white;
+  overflow-x: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+h1 {
+  font-family: "Playfair Display", serif;
+  color: var(--primary-color);
+}
+
+.svg {
+  position: absolute;
+  z-index: -1;
+}
+
+.ellipse {
+  left: 21vw;
+  top: 35vh;
+}
+
+
+.hover:hover {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+}
+
+.container {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#star1 {
+  top: 20%;
+  left: 50%;
+}
+
+#star2 {
+  top: 25%;
+  left: 53%;
+}
+
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 1080px;
+  margin-bottom: 30vw;
+}
+
+.hero .header-container {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 20px 150px;
+}
+
+.hero .background {
+  background-image: url("../public/assets/hero-background.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -2;
+  background-size: 100%;
+  height: 200vh;
+  width: 100vw;
+  right: 0;
+  top: 0;
+}
+
+.hero .nav-bar ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.hero .nav-bar li {
+  margin-left: 5vw;
+}
+
+.hero .main-section-hero {
+  margin-top: 20vh;
+}
+
+.hero .main-section-hero .hero-logo {
+  width: 40vw;
+  margin-left: 20vw;
+}
+
+.hero .main-section-hero h2 {
+  font-size: 5vw;
+  margin-left: 40vw;
+  text-shadow: 4px 4px var(--Secondary-color), -4px -4px #0f1264;
+}
+
+/*about section*/
+
+.info {
+  position: relative;
+  flex-direction: column;
+  color: var(--primary-color);
+  margin-top: 20vh;
+}
+.info h1 {
+  font-size: 7rem;
+  font-weight: normal;
+  margin: 3rem 0;
+}
+.info p {
+  font-size: 1.3rem;
+}
+.about-section {
+  margin-left: 20%;
+}
+.about-section p {
+  margin-left: 10%;
+  max-width: 60%;
+}
+.who-are-we-section {
+  margin-left: 40%;
+}
+.who-are-we-section p {
+  margin-left: 10%;
+  max-width: 70%;
+}
+
+.buble1 {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  z-index: -1;
+  right: 10%;
+  top: 0;
+  height: 200px;
+  width: 200px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+.rec {
+  position: absolute;
+  left: -40%;
+  top: 20%;
+}
+
+.buble2 {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  z-index: -1;
+  left: 10%;
+  bottom: 0;
+  height: 300px;
+  width: 300px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+.secondery-buble {
+  position: absolute;
+  z-index: -1;
+  right: -40%;
+  bottom: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 80px;
+  width: 80px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+.cross {
+  position: absolute;
+  right: 10%;
+  bottom: -20%;
+}
+
+/*animations*/
+.scale {
+  -webkit-animation: scale 5s linear infinite;
+  animation: scale 5s linear infinite;
+}
+
+.float {
+  -webkit-animation: float 5s ease-in-out infinite;
+  animation: float 5s ease-in-out infinite;
+}
+.float2 {
+  -webkit-animation: float 3s ease-in-out infinite;
+  animation: float 3s ease-in-out infinite;
+}
+
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
   }
 }
+
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+}
+
+@-webkit-keyframes float {
+  0% {
+    -webkit-transform: translatey(0px);
+    transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(-20px);
+    transform: translatey(-20px);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+    transform: translatey(0px);
+  }
+}
+
+@keyframes float {
+  0% {
+    -webkit-transform: translatey(0px);
+    transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(-20px);
+    transform: translatey(-20px);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+    transform: translatey(0px);
+  }
+}
+
+@-webkit-keyframes wiggle {
+  0% {
+    text-shadow: 8px 8px var(--Secondary-color), -8px -8px #0f1264;
+  }
+  50% {
+    text-shadow: -8px -8px 4px var(--Secondary-color), 8px 8px 4px #0f1264;
+    -webkit-animation-delay: 200ms;
+    animation-delay: 200ms;
+  }
+  100% {
+    text-shadow: 8px 8px var(--Secondary-color), -8px -8px #0f1264;
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    text-shadow: 8px 8px var(--Secondary-color), -8px -8px #0f1264;
+  }
+  50% {
+    text-shadow: -8px -8px 4px var(--Secondary-color), 8px 8px 4px #0f1264;
+    -webkit-animation-delay: 200ms;
+    animation-delay: 200ms;
+  }
+  100% {
+    text-shadow: 8px 8px var(--Secondary-color), -8px -8px #0f1264;
+  }
+}
+/*# sourceMappingURL=main.css.map */
