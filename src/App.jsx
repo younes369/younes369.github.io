@@ -188,8 +188,8 @@ function App() {
               <h2>phone number</h2>
             </div>
             <div className="holder">
-              <img src="./assets/email.svg" alt="phone-icon" />
-              <h2>phone number</h2>
+              <img src="./assets/email.svg" alt="email-icon" />
+              <h2>email</h2>
             </div>
           </div>
         </div>

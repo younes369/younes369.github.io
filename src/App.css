@@ -206,6 +206,53 @@ h1 {
   bottom: -20%;
 }
 
+/*contact us section*/
+
+.contact-us{
+  margin-top: 20vh;
+}
+
+.contact-us-top-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20vh;
+  
+}
+
+.contact-us-top-section h1{
+  width: 50%;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: normal;
+}
+
+.contact-us-top-section img{
+  width: 35px;
+}
+
+.details{
+  display: flex;
+  justify-content: center ;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 50%;
+  background-color: var(--primary-color);
+  height: 35vh;
+}
+.holder{
+  display: flex;
+  justify-content: flex-start ;
+  align-items: center;
+  padding: 25px 0 25px 0;
+  margin-left: 8%;
+  width: 50%;
+  border-bottom: 1px solid var(--Secondary-color);
+}
+.holder h2{
+  padding-left: 4%;
+}
+
 /*animations*/
 .scale {
   -webkit-animation: scale 5s linear infinite;
