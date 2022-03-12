@@ -1,4 +1,5 @@
 import "./App.css";
+import { Fade, Slide } from "react-awesome-reveal";
 
 import Services from "./components/Services";
 
@@ -71,20 +72,24 @@ function App() {
           </div>
         </header>
         <div className="main-section-hero">
-          <img
-            className="hero-logo float"
-            src="./assets/logo.svg"
-            alt=""
-            srcset=""
-          />
-          <h2 id="hero-text">For IT Solutions</h2>
+          <Slide triggerOnce>
+            <img
+              className="hero-logo float"
+              src="./assets/logo.svg"
+              alt=""
+              srcset=""
+            />
+          </Slide>
+          <Fade delay={1000} triggerOnce>
+            <h2 id="hero-text">For IT Solutions</h2>
+          </Fade>
         </div>
       </section>
       <Services />
       <section className="info container">
-        <div className="buble1">
+        <div className="buble1 float">
           <svg
-            className="rec"
+            className="rec float2"
             width="178"
             height="200"
             viewBox="0 0 178 200"
@@ -111,9 +116,9 @@ function App() {
             />
           </svg>
         </div>
-        <div className="buble2">
+        <div className="buble2 float">
           <svg
-            className="cross"
+            className="cross float2"
             width="116"
             height="179"
             viewBox="0 0 116 179"
@@ -160,24 +165,28 @@ function App() {
           </svg>
           <div className="secondery-buble"></div>
         </div>
-        <div className="about-section">
-          <h1>About Us</h1>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. At nisi
-            labore ipsum necessitatibus! Rerum, voluptatibus deserunt quisquam,
-            exercitationem accusantium distinctio consequuntur autem quidem
-            assumenda ullam nesciunt optio doloremque obcaecati sunt.
-          </p>
-        </div>
-        <div className="who-are-we-section">
-          <h1>Who Are We?</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
-            veniam. Eveniet aut voluptatum ratione delectus iusto velit quas,
-            accusamus esse animi optio, soluta sapiente ex praesentium, vitae
-            ipsum eaque corporis?
-          </p>
-        </div>
+        <Fade duration={2000}>
+          <div className="about-section">
+            <h1>About Us</h1>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. At nisi
+              labore ipsum necessitatibus! Rerum, voluptatibus deserunt
+              quisquam, exercitationem accusantium distinctio consequuntur autem
+              quidem assumenda ullam nesciunt optio doloremque obcaecati sunt.
+            </p>
+          </div>
+        </Fade>
+        <Fade duration={2000}>
+          <div className="who-are-we-section">
+            <h1>Who Are We?</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
+              veniam. Eveniet aut voluptatum ratione delectus iusto velit quas,
+              accusamus esse animi optio, soluta sapiente ex praesentium, vitae
+              ipsum eaque corporis?
+            </p>
+          </div>
+        </Fade>
       </section>
       <section className="contact-us">
         <div className="contact-us-top-section">

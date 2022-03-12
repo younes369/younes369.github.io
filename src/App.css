@@ -232,15 +232,18 @@ h1 {
 }
 
 .details{
+  width: 50%;
   display: flex;
   justify-content: center ;
   align-items: flex-start;
   flex-direction: column;
-  width: 50%;
   background-color: var(--primary-color);
   height: 35vh;
 }
+
 .holder{
+  transform: scale(1);
+  transition: transform 300ms ease-in-out;
   display: flex;
   justify-content: flex-start ;
   align-items: center;
@@ -251,6 +254,11 @@ h1 {
 }
 .holder h2{
   padding-left: 4%;
+}
+
+.holder:hover{
+  transform: scale(0.98);
+  transition: transform 300ms ease-in-out;
 }
 
 /*animations*/
