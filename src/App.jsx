@@ -1,7 +1,8 @@
 import "./App.css";
 import { Fade, Slide } from "react-awesome-reveal";
-
 import Services from "./components/Services";
+import Form from "./components/Form";
+
 
 function App() {
   return (
@@ -188,21 +189,9 @@ function App() {
           </div>
         </Fade>
       </section>
-      <section className="contact-us">
-        <div className="contact-us-top-section">
-          <h1>Contact Us</h1>
-          <div className="details">
-            <div className="holder">
-              <img src="./assets/phone-number.svg" alt="phone-icon" />
-              <h2>phone number</h2>
-            </div>
-            <div className="holder">
-              <img src="./assets/email.svg" alt="email-icon" />
-              <h2>email</h2>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Form/>
+
+
     </div>
   );
 }

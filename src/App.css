@@ -28,7 +28,9 @@ h1 {
   font-family: "Playfair Display", serif;
   color: var(--primary-color);
 }
-
+button {
+  font-family: "Audiowide", cursive;
+}
 .svg {
   position: absolute;
   z-index: -1;
@@ -38,7 +40,6 @@ h1 {
   left: 21vw;
   top: 35vh;
 }
-
 
 .hover:hover {
   -webkit-transform: scale(0.9);
@@ -204,61 +205,6 @@ h1 {
   position: absolute;
   right: 10%;
   bottom: -20%;
-}
-
-/*contact us section*/
-
-.contact-us{
-  margin-top: 20vh;
-}
-
-.contact-us-top-section{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20vh;
-  
-}
-
-.contact-us-top-section h1{
-  width: 50%;
-  text-align: center;
-  font-size: 5rem;
-  font-weight: normal;
-}
-
-.contact-us-top-section img{
-  width: 35px;
-}
-
-.details{
-  width: 50%;
-  display: flex;
-  justify-content: center ;
-  align-items: flex-start;
-  flex-direction: column;
-  background-color: var(--primary-color);
-  height: 35vh;
-}
-
-.holder{
-  transform: scale(1);
-  transition: transform 300ms ease-in-out;
-  display: flex;
-  justify-content: flex-start ;
-  align-items: center;
-  padding: 25px 0 25px 0;
-  margin-left: 8%;
-  width: 50%;
-  border-bottom: 1px solid var(--Secondary-color);
-}
-.holder h2{
-  padding-left: 4%;
-}
-
-.holder:hover{
-  transform: scale(0.98);
-  transition: transform 300ms ease-in-out;
 }
 
 /*animations*/
