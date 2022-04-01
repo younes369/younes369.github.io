@@ -1,6 +1,7 @@
 [
     {
        "icon":"./assets/webDevelopment-icon.svg" ,
+       "icon2":"./assets/webDevelopment-icon2.svg" ,
        "title":"Web Development",
        "phrase":"Some Catchy phrase in bold.",
        "key-points":[
@@ -11,6 +12,7 @@
     },
     {
        "icon":"./assets/webdesign-icon.svg" ,
+       "icon2":"./assets/webdesign-icon2.svg" ,
        "title":"Webdesign ",
        "phrase":"Some Catchy phrase in bold.",
        "key-points":[
@@ -21,6 +23,7 @@
     },
     {
        "icon":"./assets/logo-design-icon.svg" ,
+       "icon2":"./assets/logo-design-icon2.svg" ,
        "title":"Logo Design",
        "phrase":"Some Catchy phrase in bold.",
        "key-points":[
@@ -31,6 +34,7 @@
     },
     {
        "icon":"./assets/mobile-apps-icon.svg" ,
+       "icon2":"./assets/mobile-apps-icon2.svg" ,
        "title":"Mobile Apps",
        "phrase":"Some Catchy phrase in bold.",
        "key-points":[
@@ -41,6 +45,7 @@
     },
     {
        "icon":"./assets/it-icon.svg" ,
+       "icon2":"./assets/it-icon2.svg" ,
        "title":"IT Infrastructure",
        "phrase":"Some Catchy phrase in bold.",
        "key-points":[
@@ -51,6 +56,7 @@
     },
     {
        "icon":"./assets/webDevelopment-icon.svg" ,
+       "icon2":"./assets/webDevelopment-icon2.svg" ,
        "title":"Web Development",
        "phrase":"Some Catchy phrase in bold.",
        "key-points":[

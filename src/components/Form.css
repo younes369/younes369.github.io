@@ -101,7 +101,7 @@
   font-size: 10px;
   text-align: center;
 }
-.services-text {
+.services-form-text {
   z-index: -1;
   opacity: 0;
   transition: opacity 300ms linear;
@@ -124,7 +124,7 @@
 .input:hover img {
   transform: scale(0.9);
 }
-.input:hover .services-text {
+.input:hover .services-form-text {
   z-index: 1;
   opacity: 1;
   transition: opacity 300ms linear;

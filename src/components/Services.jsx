@@ -1,7 +1,7 @@
 import "./Services.css";
 import Card from "./Card";
 
-const cardData = require("../data/card-data.json");
+const cardData = require("../data/data.json");
 
 function Services() {
 

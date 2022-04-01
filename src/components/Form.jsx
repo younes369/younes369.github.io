@@ -1,45 +1,65 @@
 import react, { useState } from "react";
-import "./Form.css"
+import "./Form.css";
 
-
-const cardData = require("../data/card-data.json");
+const data = require("../data/data.json");
 
 function Form() {
   var [selected, setSelected] = useState(" ");
-  console.log(selected);
+  var [clicked, setClicked] = useState(null);
+
+  const submit = async (event) => {
+    event.preventDefault();
+    fetch("http://localhost:3001/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: event.target.name.value,
+        email: event.target.email.value,
+        phoneNum: event.target.phoneNum.value,
+        budget: event.target.budget.value,
+        description: event.target.description.value,
+        subject: selected,
+      }),
+    }).then(() => { setSelected(" ");setClicked(null);})
+  };
+
   return (
     <section className="form-container container">
       <div className="lhs-form">
         <h1>Contact Form</h1>
-        <form className="form" action="">
+        <form onSubmit={submit} className="form" action="">
           <label htmlFor="name">Name:</label>
           <input type="text" name="name" id="name" />
           <label htmlFor="email">Email:</label>
           <input type="text" name="email" id="email" />
-          <label htmlFor="PhoneNum">Phone Number:</label>
-          <input type="text" name="PhoneNum" id="PhoneNum" />
+          <label htmlFor="phoneNum">Phone Number:</label>
+          <input type="text" name="phoneNum" id="phoneNum" />
           <label htmlFor="budget">Budget:</label>
           <input type="text" name="budget" id="budget" />
           <label htmlFor="description">Description:</label>
           <textarea type="text" name="description" id="description" />
           <label htmlFor="services">Select Services:</label>
           <div name="services" className="select-services">
-            {cardData.map((card, index) => {
+            {data.map((data, index) => {
               return (
                 <div
                   onClick={() => {
-                    setSelected(`${card["title"]}`);
+                    setClicked(index);
+                    setSelected(`${data["title"]}`);
                   }}
                   className="input"
                   key={index}
                 >
-                  <div className="services-text">
-                    <p>{card["title"]}</p>
+                  <div className="services-form-text">
+                    <p>{data["title"]}</p>
                   </div>
                   <img
-                    src={card["icon"]}
-                    name="web-development"
-                    alt="web development"
+                    src={clicked == index ? data["icon"] : data["icon2"]}
+                    style={clicked == index ? { transform: "scale(0.85)" } : {}}
+                    name={data["title"]}
+                    alt={data["title"]}
                     srcset=""
                   />
                 </div>
@@ -47,7 +67,9 @@ function Form() {
             })}
           </div>
           <div className="submit-button">
-            <button className="custom-button neutral-button">Submit</button>
+            <button className="custom-button neutral-button" type="submit">
+              Submit
+            </button>
           </div>
         </form>
       </div>
