@@ -1,6 +1,11 @@
 
 /*form*/
+.form span{
+  color: red;
+}
+
 .form-container {
+  position: relative;
   aspect-ratio: 4/3;
   border: 2px solid rgba(7, 8, 46, 0.29);
   border-radius: 40px;
@@ -32,6 +37,7 @@
   height: 100%;
 }
 .lhs-form h1 {
+  text-align: center;
   color: var(--primary-color);
   font-weight: normal;
   font-size: 4.3rem;
@@ -171,4 +177,134 @@
   background-color: var(--Secondary-color);
   transition: color 300ms linear;
   transition: background-color 300ms linear;
+}
+
+
+.email-status{
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  height: fit-content;  
+  padding: 40px 100px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  animation: fade 4s linear forwards;
+  
+}
+.email-status svg{
+  margin-bottom: 5vh;
+}
+.email-status p{
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+
+.mark-animation {
+  stroke: rgba(192, 254, 16, 1);
+  stroke-dashoffset: 745.74853515625;
+  stroke-dasharray: 745.74853515625;
+  animation: dash 1s linear  1s forwards;
+}
+
+.mark-animation2{
+  stroke: rgb(226, 63, 42);
+  stroke-dashoffset: 745.74853515625;
+  stroke-dasharray: 745.74853515625;
+  animation: dash2 1s linear  1s forwards;
+  
+}
+
+/*animation*/
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 745.74853515625;
+  }
+  50%{
+    fill: rgba(255, 255, 255, 0);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: rgba(192, 254, 16, 1);
+  }
+}
+@keyframes dash2 {
+  0% {
+    stroke-dashoffset: 745.74853515625;
+  }
+  50%{
+    fill: rgba(226, 63, 42, 0);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: rgba(226, 63, 42, 1);
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  30%{
+    opacity: 1;
+  }
+  70%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*media*/
+
+@media (max-width: 700px) {
+  .input{
+    width: 40%;
+  }
+  .form-container{
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .lhs-form h1{
+    font-size: 3rem;
+  }
+}
+
+
+/*media*/
+@media (max-width: 1200px) {
+  .form{
+    overflow: hidden;
+  }
+  .form-container{
+    aspect-ratio:0;
+    background-image:url(../../public/assets/form-bg-mobile.svg);
+    background-position: top right;
+    background-size: 100% ;
+    width: fit-content  ;
+  }
+  .lhs-form h1{
+    margin: 5% 0;
+  }
+  .lhs-form{
+    width: fit-content;
+  }
+
+  .rhs-form{
+    display: none;
+  }
+  .form textarea{
+    height: 150px;
+  }
+  .form input{
+    height: 30px;
+  }
 }

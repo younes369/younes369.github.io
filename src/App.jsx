@@ -1,10 +1,16 @@
 import "./App.css";
+import { useState, useEffect } from "react";
 import { Fade, Slide } from "react-awesome-reveal";
 import Services from "./components/Services";
 import Form from "./components/Form";
-
+import Footer from "./components/Footer";
 
 function App() {
+  var [display, setDisplay] = useState(true);
+  var [width, setWidth] = useState(window.innerWidth);
+  window.addEventListener("resize", () => {
+    setWidth(window.innerWidth);
+  });
   return (
     <div className="App">
       <section className="hero">
@@ -51,15 +57,18 @@ function App() {
             <div className="logo">
               <img src="./assets/logo.svg" alt="logo" srcset="" />
             </div>
-            <nav className="nav-bar">
+            <nav
+              style={display && width < 700 ? { display: "none" } : {}}
+              className="nav-bar"
+            >
               <ul>
                 <li>
-                  <a className="redirect" href="#about">
+                  <a className="redirect" href="#our-services">
                     Our Services
                   </a>
                 </li>
                 <li>
-                  <a className="redirect" href="#skills">
+                  <a className="redirect" href="#about">
                     About
                   </a>
                 </li>
@@ -70,6 +79,15 @@ function App() {
                 </li>
               </ul>
             </nav>
+            <img
+              onClick={() => {
+                setDisplay(!display);
+              }}
+              className="h-menu"
+              src="./assets/h-menu.svg"
+              alt="hamburger menu"
+              srcset=""
+            />
           </div>
         </header>
         <div className="main-section-hero">
@@ -87,7 +105,7 @@ function App() {
         </div>
       </section>
       <Services />
-      <section className="info container">
+      <section id="about" className="info container">
         <div className="buble1 float">
           <svg
             className="rec float2"
@@ -189,9 +207,8 @@ function App() {
           </div>
         </Fade>
       </section>
-      <Form/>
-
-
+      <Form />
+      <Footer />
     </div>
   );
 }

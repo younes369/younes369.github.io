@@ -1,0 +1,9 @@
+footer{
+    width: 100%;
+    background-color: var(--primary-color);
+}
+
+.footer h1{
+    color: white;
+
+}

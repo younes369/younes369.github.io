@@ -1,5 +1,10 @@
-<svg width="711" height="554" viewBox="0 0 711 554" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="139.586" cy="414.659" r="106.232" transform="rotate(-20.6715 139.586 414.659)" stroke="#FFDA19" stroke-width="3"/>
-<circle cx="332.763" cy="207.277" r="67.5554" transform="rotate(-20.6715 332.763 207.277)" stroke="#FFDA19" stroke-width="3"/>
-<circle cx="451.072" cy="260.223" r="199.683" transform="rotate(-20.6715 451.072 260.223)" stroke="#FFDA19" stroke-width="3"/>
+<svg width="583" height="730" viewBox="0 0 583 730" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_24_71" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="583" height="730">
+<rect x="0.676025" width="581.564" height="729.888" rx="75" fill="#07082E"/>
+</mask>
+<g mask="url(#mask0_24_71)">
+<circle cx="306.263" cy="708.659" r="106.232" transform="rotate(-20.6715 306.263 708.659)" stroke="#FFDA19" stroke-width="3"/>
+<circle cx="499.439" cy="501.277" r="67.5554" transform="rotate(-20.6715 499.439 501.277)" stroke="#FFDA19" stroke-width="3"/>
+<circle cx="617.748" cy="554.223" r="199.683" transform="rotate(-20.6715 617.748 554.223)" stroke="#FFDA19" stroke-width="3"/>
+</g>
 </svg>

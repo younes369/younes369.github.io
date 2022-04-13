@@ -21,6 +21,8 @@ a {
 body {
   font-family: "Audiowide", cursive;
   color: white;
+}
+.App {
   overflow-x: hidden;
 }
 
@@ -51,6 +53,7 @@ button {
 }
 
 .container {
+  max-width: 1920px;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -73,10 +76,19 @@ button {
   left: 53%;
 }
 
+.h-menu {
+  z-index: 6;
+  width: 10vw;
+  display: none;
+}
+.h-menu:hover {
+  cursor: pointer;
+}
+
 .hero {
   position: relative;
   width: 100vw;
-  height: 1080px;
+  height: 100vh;
   margin-bottom: 30vw;
 }
 
@@ -224,31 +236,31 @@ button {
 
 @-webkit-keyframes scale {
   0% {
-    -webkit-transform: scale(0.95);
-    transform: scale(0.95);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
   }
   50% {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
   }
   100% {
-    -webkit-transform: scale(0.95);
-    transform: scale(0.95);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
   }
 }
 
 @keyframes scale {
   0% {
-    -webkit-transform: scale(0.95);
-    transform: scale(0.95);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
   }
   50% {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
   }
   100% {
-    -webkit-transform: scale(0.95);
-    transform: scale(0.95);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
   }
 }
 
@@ -309,4 +321,94 @@ button {
     text-shadow: 8px 8px var(--Secondary-color), -8px -8px #0f1264;
   }
 }
-/*# sourceMappingURL=main.css.map */
+
+/*media*/
+@media (max-width: 1200px) {
+  .info h1 {
+    font-size: 5rem;
+  }
+  .info p {
+    font-size: 1rem;
+  }
+  .buble2 {
+    left: 1%;
+  }
+}
+@media (max-width: 1000px) {
+  .hero .background {
+    background-image: url(../public/assets/hero-background-mobile.svg);
+  }
+  .hero .header-container {
+    padding: 20px 30px;
+  }
+}
+
+@media (max-width: 950px) {
+  .buble2 {
+    display: none;
+  }
+  .buble1 {
+    display: none;
+  }
+  .about-section {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-section p {
+    margin: 0;
+    text-align: center;
+  }
+  .who-are-we-section {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .who-are-we-section p {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .info h1 {
+    text-align: center;
+  }
+  .hero {
+    height: 70vh;
+  }
+  .hero .main-section-hero {
+    margin-top: 10vh;
+  }
+  .logo img {
+    width: 20vw;
+  }
+  .nav-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url(../public/assets/h-menu-bg.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 100%;
+    width: 60vw;
+    height: 100vh;
+    z-index: 5;
+  }
+  .nav-bar ul {
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+  }
+  .h-menu {
+    display: block;
+  }
+}

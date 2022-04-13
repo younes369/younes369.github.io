@@ -34,7 +34,6 @@
 
 /*svg*/
 
-
 .svg1 {
   position: absolute;
   left: 0;
@@ -97,5 +96,31 @@
     d: path(
       "M267 2.93409C349.983 15.0938 386.798 106.632 444.327 167.661C498.791 225.438 589.548 265.588 589.442 344.988C589.335 424.366 501.85 467.646 443.853 521.842C389.101 573.005 341.323 636.723 267 646.295C184.435 656.928 91.7538 637.574 37.8614 574.127C-13.8921 513.198 12.6223 424.916 11.0695 344.988C9.46166 262.228 -20.8078 173.048 28.7818 106.771C82.7288 34.6697 177.902 -10.1215 267 2.93409Z"
     );
+  }
+}
+
+/*media*/
+@media (max-width: 700px) {
+  .text {
+    transform: rotate(0deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .text h1{
+    margin-left: 0;
+    margin-bottom: 5vh;
+  }
+  .services {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+  .mg{
+    margin: 0;
+  }
+}
+@media (max-width: 450px) {
+  .text h1{
+    font-size: 3.5rem;
   }
 }

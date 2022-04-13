@@ -3,8 +3,8 @@ import { Slide } from "react-awesome-reveal";
 
 function Card({ card, index }) {
   return (
-    <Slide className="mg" direction={index % 2 !== 0 ? "right" : "left"} triggerOnce>
-      <div className="card" key={index}>
+    <Slide  direction={index % 2 !== 0 ? "right" : "left"} triggerOnce>
+      <div className=" mg card" key={index}>
         <div>
           <div className="card-top card-flex">
             <img src={card["icon"]} alt="" srcset="" />
