@@ -207,7 +207,9 @@ function App() {
           </div>
         </Fade>
       </section>
-      <Form />
+      <section className="contact-us">
+        <Form />
+      </section>
       <Footer />
     </div>
   );

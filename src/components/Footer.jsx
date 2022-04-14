@@ -2,24 +2,31 @@ import "./Footer.css";
 
 function Footer({ card, index }) {
   return (
-    <footer>
-      <div className="footer container">
-        <div className="inner-container-top">
-          <div className="left-links">
+    <footer className="flex-footer">
+      <div className="footer flex-footer">
+        <div className="inner-container-top flex-footer">
+          <div className="left-links flex-footer">
             <a href="#">GitHub page 1</a>
             <a href="#">GitHub page 1</a>
             <a href="#">GitHub page 1</a>
           </div>
-          <div className="right-links">
+          <img src="./assets/logo.svg" alt="logo" srcset="" />
+          <div className="right-links flex-footer">
             <a href="#">Our Services</a>
             <a href="#">Contact Us</a>
             <a href="#">About</a>
           </div>
         </div>
         <div className="inner-container-bottom">
-          <img src="" alt="" srcset="" />
-          <img src="" alt="" srcset="" />
-          <img src="" alt="" srcset="" />
+          <a href="#">
+            <img src="./assets/facebook-icon.svg" alt="" srcset="" />
+          </a>
+          <a href="#">
+            <img src="./assets/twitter-icon.svg" alt="" srcset="" />
+          </a>
+          <a href="#">
+            <img src="./assets/github-icon.svg" alt="" srcset="" />
+          </a>
         </div>
       </div>
     </footer>
