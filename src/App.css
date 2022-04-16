@@ -52,13 +52,6 @@ button {
   transition: transform 300ms, -webkit-transform 300ms;
 }
 
-.container {
-  max-width: 3840px;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 #star1 {
   top: 20%;
@@ -69,7 +62,13 @@ button {
   top: 25%;
   left: 53%;
 }
-
+.container {
+  max-width: 3840px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .h-menu {
   z-index: 6;
   width: 10vw;

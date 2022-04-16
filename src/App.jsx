@@ -14,43 +14,6 @@ function App() {
   return (
     <div className="App">
       <section className="hero">
-        <svg
-          class="svg scale"
-          id="star1"
-          width="1.8vw"
-          height="1.8vw"
-          viewBox="0 0 40 40"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M19.8571 0H20.4286L21 20L20.4286 40H19.8571L19 20L19.8571 0Z"
-            fill="#FFDA19"
-          />
-          <path
-            d="M0 20.1429L0 19.5714L20 19L40 19.5714V20.1429L20 21L0 20.1429Z"
-            fill="#FFDA19"
-          />
-        </svg>
-        <svg
-          className="svg scale"
-          id="star2"
-          width="1.4vw"
-          height="1.4vw"
-          viewBox="0 0 40 40"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M19.8571 0H20.4286L21 20L20.4286 40H19.8571L19 20L19.8571 0Z"
-            fill="#FFDA19"
-          />
-          <path
-            d="M0 20.1429L0 19.5714L20 19L40 19.5714V20.1429L20 21L0 20.1429Z"
-            fill="#FFDA19"
-          />
-        </svg>
-
         <div className="background"></div>
         <header>
           <div className="header-container container">

@@ -1,6 +1,5 @@
-
 /*form*/
-.form span{
+.form span {
   color: red;
 }
 
@@ -15,6 +14,7 @@
   width: 80%;
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  max-width: 3000px;
 }
 .rhs-form {
   width: 60%;
@@ -124,7 +124,7 @@
   bottom: 110%;
 }
 
-.input:hover{
+.input:hover {
   cursor: pointer;
 }
 .input:hover img {
@@ -135,9 +135,6 @@
   opacity: 1;
   transition: opacity 300ms linear;
 }
-
-
-
 
 .submit-button {
   width: 100%;
@@ -179,8 +176,7 @@
   transition: background-color 300ms linear;
 }
 
-
-.email-status{
+.email-status {
   position: absolute;
   margin: auto;
   right: 0;
@@ -191,35 +187,32 @@
   justify-content: center;
   align-items: center;
   width: 20vw;
-  height: fit-content;  
+  height: fit-content;
   padding: 40px 100px;
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   animation: fade 4s linear forwards;
-  
 }
-.email-status svg{
+.email-status svg {
   margin-bottom: 5vh;
 }
-.email-status p{
+.email-status p {
   font-size: 1rem;
   color: var(--primary-color);
 }
-
 
 .mark-animation {
   stroke: rgba(192, 254, 16, 1);
   stroke-dashoffset: 745.74853515625;
   stroke-dasharray: 745.74853515625;
-  animation: dash 1s linear  1s forwards;
+  animation: dash 1s linear 1s forwards;
 }
 
-.mark-animation2{
+.mark-animation2 {
   stroke: rgb(226, 63, 42);
   stroke-dashoffset: 745.74853515625;
   stroke-dasharray: 745.74853515625;
-  animation: dash2 1s linear  1s forwards;
-  
+  animation: dash2 1s linear 1s forwards;
 }
 
 /*animation*/
@@ -228,7 +221,7 @@
   0% {
     stroke-dashoffset: 745.74853515625;
   }
-  50%{
+  50% {
     fill: rgba(255, 255, 255, 0);
   }
   100% {
@@ -240,7 +233,7 @@
   0% {
     stroke-dashoffset: 745.74853515625;
   }
-  50%{
+  50% {
     fill: rgba(226, 63, 42, 0);
   }
   100% {
@@ -252,10 +245,10 @@
   0% {
     opacity: 0;
   }
-  30%{
+  30% {
     opacity: 1;
   }
-  70%{
+  70% {
     opacity: 1;
   }
   100% {
@@ -266,45 +259,68 @@
 /*media*/
 
 @media (max-width: 700px) {
-  .input{
+  .input {
     width: 40%;
   }
-  .form-container{
+  .form-container {
     margin-left: 30px;
     margin-right: 30px;
   }
-  .lhs-form h1{
+  .lhs-form h1 {
     font-size: 3rem;
   }
 }
 
-
 /*media*/
 @media (max-width: 1200px) {
-  .form{
+  .form {
     overflow: hidden;
   }
-  .form-container{
-    aspect-ratio:0;
-    background-image:url(../../public/assets/form-bg-mobile.svg);
+  .form-container {
+    aspect-ratio: 0;
+    background-image: url(../../public/assets/form-bg-mobile.svg);
     background-position: top right;
-    background-size: 100% ;
-    width: fit-content  ;
+    background-size: 100%;
+    width: fit-content;
   }
-  .lhs-form h1{
+  .lhs-form h1 {
     margin: 5% 0;
   }
-  .lhs-form{
+  .lhs-form {
     width: fit-content;
   }
 
-  .rhs-form{
+  .rhs-form {
     display: none;
   }
-  .form textarea{
+  .form textarea {
     height: 150px;
   }
-  .form input{
+  .form input {
     height: 30px;
+  }
+}
+
+@media (min-width: 2200px) {
+  .form-container{
+    border-radius: 80px;
+  }
+  .lhs-form h1 {
+    font-size: 5.5rem;
+  }
+  .rhs-form h1 {
+    font-size: 7.5rem;
+  }
+}
+@media (min-width: 3000px) {
+  .form-container{
+    border-radius: 150px;
+  }
+  .lhs-form h1 {
+    font-size: 6rem;
+  }
+  .rhs-form h1 {
+    font-size: 10rem;
+    margin-left: 80px;
   }
 }
