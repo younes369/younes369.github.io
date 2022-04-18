@@ -2,6 +2,14 @@ footer {
   padding: 50px 50px;
   background-color: var(--primary-color);
 }
+footer a {
+  transform: scale(1);
+  transition: transform 300ms ease-in-out;
+}
+footer img {
+  transform: scale(1);
+  transition: transform 300ms ease-in-out;
+}
 .footer {
   width: 100%;
   flex-direction: column;
@@ -16,8 +24,6 @@ footer {
   color: white;
 }
 .inner-container-top {
-  margin-bottom: 5vh;
-  border-bottom: 1px solid var(--Secondary-color);
   padding: 40px 50px;
   justify-content: space-between;
   width: 80%;
@@ -33,10 +39,30 @@ footer {
   margin-left: 40px;
 }
 
+hr {
+  border-color: var(--Secondary-color);
+  width: 80%;
+  transition: width 300ms ease-in-out;
+  margin-bottom: 5vh;
+}
+hr:hover {
+  width: 85%;
+  transition: width 300ms ease-in-out;
+}
+
 .inner-container-bottom img {
   margin-left: 30px;
 }
 
+/*hover*/
+footer a:hover {
+  transform: scale(0.95);
+  transition: transform 300ms ease-in-out;
+}
+footer img:hover {
+  transform: scale(0.95);
+  transition: transform 300ms ease-in-out;
+}
 /*media*/
 
 @media (max-width: 1200px) {

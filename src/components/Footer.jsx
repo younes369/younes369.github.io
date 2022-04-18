@@ -17,6 +17,7 @@ function Footer({ card, index }) {
             <a href="#">About</a>
           </div>
         </div>
+        <hr />
         <div className="inner-container-bottom">
           <a href="#">
             <img src="./assets/facebook-icon.svg" alt="" srcset="" />
