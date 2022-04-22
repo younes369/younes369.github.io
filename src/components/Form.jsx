@@ -22,7 +22,7 @@ function Form() {
         body: JSON.stringify({
           name: event.target.name.value,
           email: event.target.email.value,
-          phoneNum: event.target.phoneNum.value|| 0,
+          phoneNum: event.target.phoneNum.value || 0,
           budget: event.target.budget.value || 0,
           description: event.target.description.value,
           subject: selected,

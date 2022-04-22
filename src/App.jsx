@@ -170,7 +170,22 @@ function App() {
           </div>
         </Fade>
       </section>
-      <section className="contact-us">
+      <section className="contact-us container">
+        <section className="contact-us-banner container">
+          <div className="lhs-contact-us-banner">
+            <h1>Contact Us</h1>
+          </div>
+          <div className="rhs-contact-us-banner">
+            <div className="flex-banner">
+              <img src="./assets/phone-number.svg" alt="phone number" />
+              <p>Phone Number</p>
+            </div>
+            <div className="flex-banner">
+              <img src="./assets/email.svg" alt="phone number" />
+              <p>Email</p>
+            </div>
+          </div>
+        </section>
         <Form />
       </section>
       <Footer />
