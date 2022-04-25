@@ -2,31 +2,36 @@ import react, { useState } from "react";
 import "./Form.css";
 
 const data = require("../data/data.json");
+const url = "https://intense-badlands-13091.herokuapp.com/";
 
 function Form() {
   var [selected, setSelected] = useState(" ");
-  var [clicked, setClicked] = useState(null);
+  var [clicked, setClicked] = useState(false);
   var [emailStatus, setEmailStatus] = useState(" ");
   var [display, setDispaly] = useState("none");
   var [delivered, setDelivered] = useState(false);
 
   const submit = async (event) => {
     event.preventDefault();
+    var data = {
+      name: event.target.name.value,
+      email: event.target.email.value,
+      phoneNum: event.target.phoneNum.value || 0,
+      budget: event.target.budget.value || 0,
+      description: event.target.description.value,
+      subject: selected,
+    };
+
+    console.log(data);
     if (clicked) {
-      fetch("http://localhost:3001/", {
+      fetch(url, {
         method: "POST",
+        mode: "cors",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify({
-          name: event.target.name.value,
-          email: event.target.email.value,
-          phoneNum: event.target.phoneNum.value || 0,
-          budget: event.target.budget.value || 0,
-          description: event.target.description.value,
-          subject: selected,
-        }),
+        body: JSON.stringify(data),
       })
         .then((res) => res.json())
         .then((message) => {
