@@ -44,12 +44,9 @@ button {
 }
 
 .hover:hover {
-  -webkit-transform: scale(0.9);
+  cursor: pointer;
   transform: scale(0.9);
-  -webkit-transition: -webkit-transform 300ms;
-  transition: -webkit-transform 300ms;
-  transition: transform 300ms;
-  transition: transform 300ms, -webkit-transform 300ms;
+  transition: transform 300ms ease-in-out;
 }
 
 #star1 {
@@ -70,7 +67,7 @@ button {
 }
 .h-menu {
   z-index: 6;
-  width: 10vw;
+  width: 7vw;
   display: none;
 }
 .h-menu:hover {
@@ -221,13 +218,13 @@ button {
   width: 100%;
   justify-content: space-between;
 }
-.lhs-contact-us-banner{
+.lhs-contact-us-banner {
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.lhs-contact-us-banner h1{
+.lhs-contact-us-banner h1 {
   font-size: 6rem;
   font-weight: normal;
   text-align: center;
@@ -244,14 +241,13 @@ button {
 .flex-banner {
   width: 100%;
   display: flex;
-  justify-content: flex-start ;
+  justify-content: flex-start;
   align-items: center;
   margin-bottom: 50px;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--Secondary-color);
-
 }
-.flex-banner img{
+.flex-banner img {
   margin-right: 30px;
 }
 /*animations*/
@@ -267,6 +263,9 @@ button {
 .float2 {
   -webkit-animation: float 3s ease-in-out infinite;
   animation: float 3s ease-in-out infinite;
+}
+.float3 {
+  animation: float3 3s ease-in-out infinite;
 }
 
 @-webkit-keyframes scale {
@@ -329,6 +328,21 @@ button {
   }
 }
 
+@keyframes float3 {
+  0% {
+    -webkit-transform: translatey(0px);
+    transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(-10px);
+    transform: translatey(-10px);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+    transform: translatey(0px);
+  }
+}
+
 @-webkit-keyframes wiggle {
   0% {
     text-shadow: 8px 8px var(--Secondary-color), -8px -8px #0f1264;
@@ -372,9 +386,8 @@ button {
 @media (max-width: 1000px) {
   .contact-us-banner {
     flex-direction: column;
-
   }
-  .rhs-contact-us-banner{
+  .rhs-contact-us-banner {
     width: 50%;
   }
   .hero .background {
@@ -417,17 +430,39 @@ button {
 }
 
 @media (max-width: 700px) {
-  .lhs-contact-us-banner h1{
+  .lhs-contact-us-banner h1 {
     font-size: 4.5rem;
   }
   .info h1 {
     text-align: center;
   }
+  .hero .background{
+    background:none;
+  }
   .hero {
-    height: 70vh;
+    background: url(../public/assets/hero-background-mobile-2.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100%;
+    height:600px;
+    background-color: var(--primary-color);
+    border-radius: 0px 0px 50px 0px;
   }
   .hero .main-section-hero {
-    margin-top: 10vh;
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .hero .main-section-hero .hero-logo{
+    margin: 0;
+    margin-bottom: 50px;
+    width: 80vw;
+  }
+  .hero .main-section-hero h2{
+    margin: 0;
+    font-size: 9vw;
   }
   .logo img {
     width: 20vw;
@@ -443,7 +478,7 @@ button {
     background-image: url(../public/assets/h-menu-bg.svg);
     background-repeat: no-repeat;
     background-position: right top;
-    background-size: 100%;
+    background-size: 100% ;
     width: 60vw;
     height: 100vh;
     z-index: 5;

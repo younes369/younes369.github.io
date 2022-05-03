@@ -2,7 +2,7 @@ import react, { useState } from "react";
 import "./Form.css";
 
 const data = require("../data/data.json");
-const url = "https://intense-badlands-13091.herokuapp.com/";
+const url = "";
 
 function Form() {
   var [selected, setSelected] = useState(" ");

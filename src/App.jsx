@@ -21,7 +21,7 @@ function App() {
               <img src="./assets/logo.svg" alt="logo" srcset="" />
             </div>
             <nav
-              style={display && width < 700 ? { display: "none" } : {}}
+              style={display && width <= 700 ? { display: "none" } : {}}
               className="nav-bar"
             >
               <ul>
@@ -46,7 +46,7 @@ function App() {
               onClick={() => {
                 setDisplay(!display);
               }}
-              className="h-menu"
+              className="h-menu float3"
               src="./assets/h-menu.svg"
               alt="hamburger menu"
               srcset=""
